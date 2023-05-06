@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6653917724412234555}
   - component: {fileID: 1925940782802449319}
   - component: {fileID: 1639899529106824958}
+  - component: {fileID: 620258681599862558}
   m_Layer: 0
   m_Name: Box
   m_TagString: Selectable
@@ -163,3 +164,16 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &620258681599862558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750735386906630408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1.0000001}
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}
