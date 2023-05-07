@@ -84,8 +84,14 @@ public class MoveObj : MonoBehaviour
         item.GetComponent<Rigidbody>().isKinematic = true;
 
         item.transform.parent = tempParent.transform;
-    }
 
+        // Set the selected object in the ObjRotation script to this object
+        ObjRotation objRotation = item.GetComponent<ObjRotation>();
+        if (objRotation != null)
+        {
+            objRotation.selectedObject = item;
+        }
+    }
 
     void OnMouseUp()
     {
@@ -96,6 +102,14 @@ public class MoveObj : MonoBehaviour
 
         item.transform.parent = null;
         item.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
+
+        // Reset the selected object in the ObjRotation script to null
+        ObjRotation objRotation = item.GetComponent<ObjRotation>();
+        if (objRotation != null)
+        {
+            objRotation.selectedObject = null;
+        }
     }
+
 }
 
