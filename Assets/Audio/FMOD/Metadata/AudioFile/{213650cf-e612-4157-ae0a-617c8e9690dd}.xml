@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{213650cf-e612-4157-ae0a-617c8e9690dd}">
+		<property name="assetPath">
+			<value>SFX/Objects/Impacts/Vase/vase_impact-006.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.52079365079365081</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4a2d8a6f-e238-47df-a246-778623e1cb42}</destination>
+		</relationship>
+	</object>
+</objects>
