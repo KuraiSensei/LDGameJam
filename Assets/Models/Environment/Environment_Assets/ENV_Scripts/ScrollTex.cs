@@ -10,6 +10,6 @@ public class ScrollTex : MonoBehaviour {
     void Update(){
         	float OffsetY = Time.time * scrollY;
 	float OffsetX = Time.time * scrollX;
-	GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 (OffsetX, OffsetY);
+	//GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 (OffsetX, OffsetY);
     }
 }

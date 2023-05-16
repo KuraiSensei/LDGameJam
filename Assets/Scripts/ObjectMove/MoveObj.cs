@@ -55,13 +55,23 @@ public class MoveObj : MonoBehaviour
     private float distance;
 
     public GameObject item;
-    public GameObject tempParent;
+    private GameObject tempParent;
 
-    // Use this for initialization
     void Start()
     {
-        item.GetComponent<Rigidbody>().useGravity = true;
+        // Find the tempParent GameObject by name in the scene
+        tempParent = GameObject.Find("RefPoint");
+
+        if (tempParent == null)
+        {
+            Debug.LogError("TempParent (RefPoint) not found in the scene!");
+        }
+        else
+        {
+            item.GetComponent<Rigidbody>().useGravity = true;
+        }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -93,6 +103,7 @@ public class MoveObj : MonoBehaviour
         }
     }
 
+
     void OnMouseUp()
     {
         isDragging = false;
@@ -101,7 +112,11 @@ public class MoveObj : MonoBehaviour
         item.GetComponent<Rigidbody>().isKinematic = false;
 
         item.transform.parent = null;
-        item.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
+
+        // Convert mouse position to world position with the correct distance
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        item.transform.position = worldPosition;
 
         // Reset the selected object in the ObjRotation script to null
         ObjRotation objRotation = item.GetComponent<ObjRotation>();
@@ -110,6 +125,7 @@ public class MoveObj : MonoBehaviour
             objRotation.selectedObject = null;
         }
     }
+
 
 }
 
