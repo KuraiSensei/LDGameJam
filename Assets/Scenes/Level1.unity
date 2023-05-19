@@ -5933,6 +5933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826931106}
+  - component: {fileID: 1826931107}
   m_Layer: 0
   m_Name: -----FMOD-----
   m_TagString: Untagged
@@ -5955,6 +5956,19 @@ Transform:
   m_Father: {fileID: 151239923}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826931107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826931105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &1842938308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6060,18 +6074,18 @@ Transform:
   - {fileID: 1114458590}
   - {fileID: 1604710785}
   - {fileID: 1116632768}
-  - {fileID: 1109354458}
   - {fileID: 623316576}
-  - {fileID: 137026444}
-  - {fileID: 2042397016}
-  - {fileID: 477628409}
+  - {fileID: 1109354458}
   - {fileID: 664068270}
+  - {fileID: 137026444}
+  - {fileID: 477628409}
+  - {fileID: 2042397016}
   - {fileID: 2001987414}
-  - {fileID: 986423937}
   - {fileID: 724089656}
+  - {fileID: 986423937}
+  - {fileID: 2098472554}
   - {fileID: 504583287}
   - {fileID: 2084922441}
-  - {fileID: 2098472554}
   - {fileID: 1591573106}
   - {fileID: 698971054}
   - {fileID: 1656520079}
