@@ -47,13 +47,13 @@ MonoBehaviour:
     Data4: 1266433504
   Banks:
   - {fileID: -2621960078307770604}
-  IsStream: 1
+  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1500
+  Length: 1000
 --- !u!114 &-8930093372793171072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,13 +155,13 @@ MonoBehaviour:
     Data4: -1854055917
   Banks:
   - {fileID: -2621960078307770604}
-  IsStream: 1
+  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1500
+  Length: 327
 --- !u!114 &-6983382230284057369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 281
+  Length: 457
 --- !u!114 &-5502825648404833255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 500
+  Length: 125
 --- !u!114 &-3961124582767509081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 257
 --- !u!114 &-3487455666792343059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,10 +474,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638201134492838951
+  lastModified: 638201438780047765
   FileSizes:
   - Name: Desktop
-    Value: 4536832
+    Value: 4571264
   Exists: 1
 --- !u!114 &-1666182324826793647
 MonoBehaviour:
@@ -635,7 +635,7 @@ MonoBehaviour:
   - {fileID: -2621960078307770604}
   StringsBanks:
   - {fileID: 1160294154198935045}
-  cacheTime: 638201134492869984
+  cacheTime: 638201438780077779
   cacheVersion: 131603
 --- !u!114 &1005792632805688499
 MonoBehaviour:
@@ -679,7 +679,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638201134492869984
+  lastModified: 638201438780077779
   FileSizes:
   - Name: Desktop
     Value: 2062
@@ -758,13 +758,13 @@ MonoBehaviour:
     Data4: 982465717
   Banks:
   - {fileID: -2621960078307770604}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1000
+  Length: 125
 --- !u!114 &5869222154693304805
 MonoBehaviour:
   m_ObjectHideFlags: 0
