@@ -79,8 +79,12 @@ public class MoveObj : MonoBehaviour
         if (isDragging)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 rayPoint = ray.GetPoint(distance);
-            item.transform.position = rayPoint;
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                item.transform.position = hit.point;
+            }
         }
     }
 
@@ -113,10 +117,37 @@ public class MoveObj : MonoBehaviour
 
         item.transform.parent = null;
 
-        // Convert mouse position to world position with the correct distance
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        item.transform.position = worldPosition;
+        // Raycast to check for collisions along the ray between the camera and the item
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit[] hits = Physics.RaycastAll(ray);
+
+        // Find the closest valid hit point to drop the item
+        float closestDistance = Mathf.Infinity;
+        Vector3 dropPosition = Vector3.zero;
+
+        for (int i = 0; i < hits.Length; i++)
+        {
+            RaycastHit hit = hits[i];
+
+            // Check if the hit object is a valid drop target (you can customize this condition based on your game logic)
+            if (hit.collider.CompareTag("DropTarget"))
+            {
+                float distance = Vector3.Distance(item.transform.position, hit.point);
+
+                // Update the closest hit point if it's closer than the current closest distance
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    dropPosition = hit.point;
+                }
+            }
+        }
+
+        // Set the drop position if a valid drop target was found
+        if (closestDistance < Mathf.Infinity)
+        {
+            item.transform.position = dropPosition;
+        }
 
         // Reset the selected object in the ObjRotation script to null
         ObjRotation objRotation = item.GetComponent<ObjRotation>();
@@ -125,6 +156,8 @@ public class MoveObj : MonoBehaviour
             objRotation.selectedObject = null;
         }
     }
+
+
 
 
 }
