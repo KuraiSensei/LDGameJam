@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 648781069820811426}
   - component: {fileID: 702213586768215298}
   - component: {fileID: 6260800824676103489}
+  - component: {fileID: -8526794790300740223}
   m_Layer: 0
   m_Name: large_box_OPENED
   m_TagString: Selectable
@@ -196,6 +197,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 924046289189733100}
+--- !u!114 &-8526794790300740223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924046289189733100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 932824605
+      Data2: 1263654520
+      Data3: 1024233108
+      Data4: -1173506024
+    Path: event:/SFX/Player/Grab
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2912669705026231019
 GameObject:
   m_ObjectHideFlags: 0
