@@ -299,6 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5007471386977058048}
   - component: {fileID: -406119276050319746}
+  - component: {fileID: 893990512323660608}
   m_Layer: 0
   m_Name: Intestines
   m_TagString: Untagged
@@ -346,6 +347,37 @@ MonoBehaviour:
     Path: event:/SFX/Objects/Impacts/LargeOrganImpact
   Event: 
   PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &893990512323660608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078570503233744728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 932824605
+      Data2: 1263654520
+      Data3: 1024233108
+      Data4: -1173506024
+    Path: event:/SFX/Player/Grab
+  Event: 
+  PlayEvent: 15
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
